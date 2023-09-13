@@ -206,7 +206,6 @@ form .button .cancel:hover{
   background: none;
   border: none;
   font-size: 1.5rem;
-  text-decoration: underline;
   cursor: pointer;
   font-family: 'Tektur', cursive;
 }
