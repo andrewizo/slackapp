@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap');
+body {
+  --slack-color:#391233;
+  overflow:hidden;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* LOGIN FORM CSS  */
+
+.container{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 440px;
+  margin: auto;
+  font-family: 'Tektur', cursive;
+}
+
+.login{
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+  padding: 50px 20px;
+}
+
+.login .title{
+  height: 90px;
+  background: #550048;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::selection{
+  background: #a3a2a3;
+}
+
+.login form{
+  padding-top: 25px;
+  margin: 10px;
+}
+
+.login form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.login form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 10px !important;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.login form .cancel {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 10px !important;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-family: 'Tektur', cursive;
+}
+.login form .submit {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  background: #550048;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Tektur', cursive;
+}
+
+.login form .not-registered {
+  padding: 2%;
+  border-radius: 5px;
+  border: none;
+  background: #550048;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Tektur', cursive;
+}
+
+.login p{
+  text-align: left;
+  color: red;
+}
+
+form .button .cancel:hover{
+  color: #F7B219;
+}
+
+/* REGISTER CSS */
+
+.container{
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 440px;
+  margin: auto;
+}
+
+.register{
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.register .title{
+  height: 90px;
+    background: #550048;
+
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Tektur', cursive;
+}
+
+::selection{
+    background: #a3a2a3;
+
+}
+
+.register form{
+  padding-top: 25px;
+  margin: 10px;
+}
+
+.register form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.register form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 10px !important;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.register form .cancel {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 10px !important;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: 'Tektur', cursive;
+}
+.register form .submit {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+    background: #550048;
+
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #fff;
+}
+
+.register p {
+  color: red;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form .button .cancel:hover{
+  color: #edbb57;
+}
+
+/* ClOCK CSS */
+
+.clock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s;
+  transition-property: border, box-shadow;
+}
+
+.clock h1 {
+  font-size:2em;
+  font-weight: 700;
+  color: #edbb57;
+  letter-spacing: 3px;
+
+  text-align: right;
+}
+
+.clock h2 {
+  font-size:1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #550048;
+  text-align: right;
+}
