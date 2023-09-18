@@ -88,8 +88,8 @@ const HomeTitle = styled.div`
     align-items: center;
     color: #4A154B;
     padding: 20px;
-    margin-left: 175px;
-    width: 95%;
+    margin-left: 55px;
+    width: 100%;
     & div{
       display: flex;
       flex-direction: row;

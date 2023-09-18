@@ -99,7 +99,7 @@ const LoginForm = () => {
               className="not-registered"
               onClick={() => getRoute('register')}
             >
-              Signup now
+              Create Account
             </button>
           </div>         
         </form>

@@ -55,7 +55,7 @@ const DirectMessage = () => {
 
         <HeaderRight>
           <p>
-            <InfoOutlined /> Details
+            <InfoOutlined />
           </p>
         </HeaderRight>
       </Header>

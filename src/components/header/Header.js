@@ -1,16 +1,15 @@
-import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 import styled from "styled-components";
 import { Avatar } from "@material-ui/core";
-import { AccessTime, HelpOutline, Search, FiberManualRecord } from "@material-ui/icons";
+import { FiberManualRecord } from "@material-ui/icons";
 import * as storage from '../../utils/storage';
-import { successMessage, errorMessage } from "../../utils/message";
+import { successMessage } from "../../utils/message";
 import { getUser } from "../../features/AuthSlice";
 import { clearStateChannels } from "../../features/ChannelsSlice";
 import { clearStateChannelId } from "../../features/RoomSlice";
-import { clearStateRetrieveMessages, fetchDirectMessageToUser, senderIdMessage } from "../../features/MessagesSlice";
+import { clearStateRetrieveMessages } from "../../features/MessagesSlice";
 import { UsersListAsync } from "../../features/UsersSlice";
 import { clearIdSearch } from '../../features/UsersSlice';
 
@@ -18,7 +17,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const { auth, users } = useSelector((store) => store);
+  const { auth } = useSelector((store) => store);
 
   const email = auth.user.email;
   const newEmail = email.split('@');
@@ -43,25 +42,6 @@ const Header = () => {
     history.push('/profile');
     dispatch(clearIdSearch());
     return auth.user;
-  }
-
-  const [searchId, setSearchId] = useState('');
-
-  const onHandleChange = (e) => {
-    setSearchId(e.target.value);
-  }
-
-  const onHandleSearch = (e) => {
-    e.preventDefault();
-    const userId = users.list.find(index => index.email === searchId);
-    if (!userId) {
-      return errorMessage('Error', `${searchId} is not registered as a user.`);
-    }
-    const id = userId.id
-    dispatch(fetchDirectMessageToUser(id))
-    history.push('/search-users');
-    dispatch(senderIdMessage({ senderId: userId.id }))
-    setSearchId('');
   }
 
   return (
@@ -93,6 +73,7 @@ const HeaderContainer = styled.div`
   background: var(--slack-color);
   color: #fff;
   font-family: 'Tektur', cursive;
+  border-bottom: 3px ridge white;
 `;
 
 const HeaderLeft = styled.div`
@@ -131,44 +112,13 @@ const HeaderLeft = styled.div`
 
 const HeaderAvatar = styled(Avatar)`
   cursor: pointer;
-
+  opacity: 0;
   :hover {
-    opacity: 0.8;
+    opacity: 0;
   }
 
 `
-const HeadersSearch = styled.div`
-  flex: 0.4;
-  display: flex;
-  padding: 0 50px;
-  opacity: 1;
-  border-radius: 6px;
-  text-align:center;
-  border: none;
-  border: 2px white solid;
-  border-radius: 6px;
 
-  > text {
-    font-family: 'Tektur', cursive;
-  }
-  > .MuiSvgIcon-root {
-    margin-left: 3%;
-  }
-
-  > input {
-    background: transparent;
-    border: none;
-    text-align:center;
-    min-width: 40vw;
-    outline:0;
-    color:#fff;
-  }
-
-  > button {
-    display: none;
-  }
-  
-`
 const HeaderRight = styled.div`
   flex: 0.3;
   display: flex;
