@@ -62,7 +62,7 @@ const Register = () => {
     <div className="container">
       <div className="register">
         <div className="title">
-          <span> Register Form</span>
+          <span> Sign Up to Stellaron Inc. </span>
         </div>
 
         <form onSubmit={onHandleSubmit}>

@@ -21,6 +21,9 @@ const Home = () => {
           </div>
         </div>
         <Clock />
+        <div>
+          <span> made by Andrew Sanchez </span>
+        </div>
       </HomeTitle>
 
     </HomeContainer>
@@ -88,7 +91,7 @@ const HomeTitle = styled.div`
     align-items: center;
     color: #4A154B;
     padding: 20px;
-    margin-left: 55px;
+    margin-left: 16vh;
     width: 100%;
     & div{
       display: flex;

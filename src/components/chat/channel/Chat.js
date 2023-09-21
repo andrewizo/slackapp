@@ -177,6 +177,7 @@ const HeaderRight = styled.div`
     align-items: center;
     justify-content: space-evenly;
     font-size: 14px;
+    font-family: 'Tektur', cursive;
   }
 
   > p > .MuiSvgIcon-root {
@@ -198,6 +199,7 @@ const HeaderRight = styled.div`
     float: right;
     cursor: pointer;
     border: none;
+    font-family: 'Tektur', cursive;
   }
 
 

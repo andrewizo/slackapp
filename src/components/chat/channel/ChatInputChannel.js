@@ -40,7 +40,7 @@ export default ChatInput
 
 
 const ChatInputContainer = styled.div`
-
+  font-family: 'Tektur', cursive;
   >form {
     position: absolute;
     bottom: 0;

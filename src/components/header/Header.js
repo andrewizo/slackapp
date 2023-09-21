@@ -73,7 +73,7 @@ const HeaderContainer = styled.div`
   background: var(--slack-color);
   color: #fff;
   font-family: 'Tektur', cursive;
-  border-bottom: 3px ridge white;
+  border-bottom: 3px ridge #751974;
 `;
 
 const HeaderLeft = styled.div`

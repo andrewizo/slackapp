@@ -78,7 +78,7 @@ const ChatContainer = styled.div`
   margin-top: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Tektur', cursive;
 
   >h2{
     margin-top: 8vh;
@@ -107,6 +107,7 @@ const ChatContainer = styled.div`
 
   >form >button {
     /* display: none ; */
+    font-family: 'Tektur', cursive;
   }
 
 `
@@ -118,6 +119,7 @@ const CreateMessageTo = styled.div`
   label {
     font-weight: 600;
     margin-right: 2%;
+    font-family: 'Tektur', cursive;
   }
 
   input {
@@ -140,6 +142,7 @@ margin-bottom: 2%;
   button {
     font-weight: 600;
     margin-left: 2%;
+    font-family: 'Tektur', cursive;
   }
 
   input {
